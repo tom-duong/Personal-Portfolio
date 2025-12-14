@@ -15,45 +15,47 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
     />
 
-    <link rel="stylesheet" href="./css/laptop.css" />
-    <link rel="stylesheet" href="./css/font.css" />
-    <link rel="stylesheet" href="./css/tablet.css" />
-    <link rel="stylesheet" href="./css/mobile.css" />
+    <link rel="stylesheet" href="./css/main.css" />
 
     <title>Tom's Website</title>
   </head>
   <body>
     <div class="ultimate-container">
       <div class="image-box">
-        <div class="imag"></div>
+        <div class="image-bg"></div>
       </div>
       <div id="banner">
-        <h1>Manh Thang Duong (Tom)</h1>
-        <span>Welcome to my portfolio! Have a look of my projects down below.</span>
+        <div class="banner-content">
+          <h1>Manh Thang Duong (Tom)</h1>
+          <span
+            >Welcome to my portfolio! Have a look of my projects down
+            below.</span
+          >
+        </div>
       </div>
 
       <section id="nav-bar">
         <nav class="container">
           <img src="images/avatar.jpg" alt="avatar" />
-          <div style="grid-column: 3/4" class="grow3"></div>
+          <div class="avatar"></div>
         </nav>
       </section>
 
       <section id="about" class="bg-grey">
-        <div id="target">
+        <div id="about-me">
           <h1 class="section-title">About me</h1>
           <p>
-            I am currently a first year Computer Engineering Techonology student at Sask Polytech.
-			I enjoy both working in a team and by myself and love coding small
-            python programs that make my task easier. Since high school, I have been the
-            leader in dozens of projects. I understand that team spirit does not
-            come automatically from everyone, it needs to be encouraged,
-            inspired in order for a team to achieve productivity and efficiency.
-            Even if I work well on my own, collaboration develops communication
-            skills, helps you scocialize thus strengthen relationship with
-            others. You never know how valuable and important those connection
-            are in the future. I am eager to contribute to and learn from the
-            professional workplace!
+            I am currently a first year Computer Engineering Techonology student
+            at Sask Polytech. I enjoy both working in a team and by myself and
+            love coding small python programs that make my task easier. Since
+            high school, I have been the leader in dozens of projects. I
+            understand that team spirit does not come automatically from
+            everyone, it needs to be encouraged, inspired in order for a team to
+            achieve productivity and efficiency. Even if I work well on my own,
+            collaboration develops communication skills, helps you scocialize
+            thus strengthen relationship with others. You never know how
+            valuable and important those connection are in the future. I am
+            eager to contribute to and learn from the professional workplace!
           </p>
         </div>
         <div id="personal-info">
@@ -67,36 +69,44 @@
                 <span><strong>Email</strong></span> : duong7160@saskpolytech.ca
               </li>
             </ul>
-            <div>
-              <a
-                href="https://www.linkedin.com/in/manh-thang-duong-5b5aba381/"
-                ><i class="bi bi-linkedin"></i
-              ></a>
-              <a
-                href="https://github.com/tom-duong"
-                ><i class="bi bi-github"></i
-              ></a>
+          </div>
+          <a href="https://www.linkedin.com/in/manh-thang-duong-5b5aba381/"
+            ><i class="bi bi-linkedin"></i
+          ></a>
+          <a href="https://github.com/tom-duong"
+            ><i class="bi bi-github"></i
+          ></a>
         </div>
       </section>
 
       <section id="certificate" class="bg-grey">
         <div class="container">
           <h1 class="section-title">Certificates</h1>
-          <div class="content-container">
-            <div style="grid-area: first" class="certi1 certi">
+          <div class="certi-container">
+            <div class="certi">
               <img src="images/MOSLogo.png" alt="English prize" />
               <div>
                 <p>Microsoft Office Specialist (Word)</p>
-                <a href="pdf/Microsoft Office Specialist (Word)_Manh Thang Duong.pdf">Certificate</a>
-				<a style="display: block;" href="pdf/Word Score Report.pdf">Score Report</a>
+                <a
+                  href="pdf/Microsoft Office Specialist (Word)_Manh Thang Duong.pdf"
+                  >Certificate</a
+                >
+                <a style="display: block" href="pdf/Word Score Report.pdf"
+                  >Score Report</a
+                >
               </div>
             </div>
-            <div style="grid-area: second" class="certi certi2">
+            <div class="certi">
               <img src="images/MOSLogo.png" alt="certificate" />
               <div>
                 <p>Microsoft Office Specialist (PowerPoint)</p>
-                <a href="pdf/Microsoft Office Specialist (PowerPoint)_Manh Thang Duong.pdf">Certificate</a>
-				<a style="display: block;" href="pdf/Powerpoint Score Report.pdf">Score Report</a>
+                <a
+                  href="pdf/Microsoft Office Specialist (PowerPoint)_Manh Thang Duong.pdf"
+                  >Certificate</a
+                >
+                <a style="display: block" href="pdf/Powerpoint Score Report.pdf"
+                  >Score Report</a
+                >
               </div>
             </div>
           </div>
@@ -106,22 +116,21 @@
       <section id="project">
         <div class="container">
           <h1 class="section-title">Projects</h1>
-          <div class="du-an">
-            <div class="du-an-jr">
-              <a href="water_rocket.html" target="_blank" class="du-an-first"
+          <div class="project">
+            <div class="project-child">
+              <a href="water_rocket.html" target="_blank"
                 ><img src="images\Rocket Model.jpg" alt="water rocket" />
-				<div class = "overlay"></div>
-				<div class = "overlay-text">Water Rocket</div>
-				</a>
+                <div class="overlay"></div>
+                <div class="overlay-text">Water Rocket</div>
+              </a>
             </div>
-            <div class="du-an-jr">
-              <a href="streetlamp.html" target="_blank" class="du-an-first"
-            	><img src="images/streetlamp/thumbnail.png" alt="streetlamp" />
-				<div class = "overlay"></div>
-				<div class = "overlay-text">Mini Streetlamp Model</div>
-			</a>
+            <div class="project-child">
+              <a href="streetlamp.html" target="_blank"
+                ><img src="images/streetlamp/thumbnail.png" alt="streetlamp" />
+                <div class="overlay"></div>
+                <div class="overlay-text">Mini Streetlamp Model</div>
+              </a>
             </div>
-            
           </div>
         </div>
       </section>
@@ -130,20 +139,19 @@
         <div class="container">
           <ul>
             <li>
-              <a
-                href="https://www.linkedin.com/in/manh-thang-duong-5b5aba381/"
+              <a href="https://www.linkedin.com/in/manh-thang-duong-5b5aba381/"
                 ><i class="bi bi-linkedin"></i
               ></a>
             </li>
             <li>
-              <a
-                href="https://github.com/tom-duong"
+              <a href="https://github.com/tom-duong"
                 ><i class="bi bi-github"></i
               ></a>
             </li>
           </ul>
         </div>
       </section>
+      <footer class="credit">@tom-duong</footer>
     </div>
   </body>
 </html>

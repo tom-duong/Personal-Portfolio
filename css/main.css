@@ -15,12 +15,13 @@ p {
 }
 
 body {
-  font-family: "Times New Roman", Times, serif;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
 .ultimate-container {
   max-width: 1280px;
   margin: 0 auto;
+  padding-bottom: 20px;
 }
 
 .bg-grey {
@@ -28,10 +29,10 @@ body {
 }
 
 section > .container {
-  margin: auto;
+  max-width: inherit;
   display: block;
-
   padding: 30px 50px;
+  margin: 0;
 }
 
 .section-title {
@@ -48,34 +49,36 @@ i {
   height: 480px;
 }
 
-.imag {
+.image-bg {
   width: 100%;
   height: 100%;
   background-image: url("../images/background.jpg");
-  /* /images/background.jpg */
   filter: brightness(50%);
 
   background-position: center;
   background-size: cover;
 }
 
-#banner h1,
-#banner span {
+.banner-content {
+  display: flex;
+  flex-direction: column;
   color: white;
   font-size: 40px;
   position: absolute;
   top: 130px;
   left: 50%;
   transform: translate(-50%, 0);
-  width: max-content;
+}
+
+#banner h1,
+#banner span {
+  text-align: center;
 }
 
 #banner span {
   font-size: 20px;
   top: 180px;
 }
-/* position cho cái "Java Developer" riêng bởi em không biết chỉnh
-cho nó center được */
 
 a {
   text-decoration: none;
@@ -86,13 +89,13 @@ nav a {
 }
 
 #nav-bar {
-  text-align: center; /* dành cho phần đã bị che khuất bởi ảnh ở giữa */
+  text-align: center;
   position: relative;
 }
 
 #nav-bar img {
   position: absolute;
-  height: 200px;
+  /* height: 200px; */
   width: 200px;
   border-radius: 50%;
   border: 8px solid white;
@@ -102,35 +105,33 @@ nav a {
 }
 
 #nav-bar .container {
-  width: 1000px;
-
+  width: 100%;
   padding: 0;
   display: grid;
   grid-template-columns: repeat(2, 1fr) 400px repeat(2, 1fr);
 }
 
-.grow3 {
+.avatar {
   border-right: 1px solid rgba(128, 128, 128, 0.205);
   height: 50px;
-}
-
-.grow3 {
   display: inline-block;
 }
 
 #about {
   display: flex;
-
   line-height: 30px;
 }
 
-#target,
+#about-me,
 #personal-info {
   flex: 1;
   padding: 80px 50px 50px;
 }
-
-/* personal-info */
+#personal-info i {
+  color: #199cdb;
+  font-size: 25px;
+  margin-right: 15px;
+}
 
 #about h1 {
   margin-bottom: 30px;
@@ -149,9 +150,10 @@ nav a {
   width: 45px;
 }
 
-.content-container {
+.certi-container {
   display: flex;
-  column-gap: 20px;
+  gap: 2px;
+  justify-content: space-between;
 }
 
 #certificate h1 {
@@ -159,23 +161,16 @@ nav a {
   margin-top: 20px;
 }
 
-.content-container img {
-  width: 200px;
-}
-
-/* mỗi phần certificate */
 .certi {
   display: flex;
-  gap: 30px;
-  /* padding: 40px 0; */
-  margin-bottom: 40px;
+  gap: 20px;
+  padding-left: 5px;
 }
 
-.certi1 {
-  border-right: 1px solid grey;
+.certi-container img {
+  width: 30%;
 }
 
-/* các tiêu đề của certificate */
 .certi p:first-child {
   font-weight: bold;
   text-transform: uppercase;
@@ -183,32 +178,26 @@ nav a {
   color: black;
 }
 
-.du-an {
+.project {
   display: flex;
   justify-content: space-around;
+  gap: 20px;
 }
 
 #project h1 {
   margin-bottom: 30px;
 }
-
-.du-an img {
-  width: 300px;
-  border: 1px solid rgba(108, 108, 108, 0.235);
-}
-
-.du-an-first {
+.project-child {
   display: block;
-  width: 300px;
+  width: 50%;
   position: relative;
 }
 
-.du-an-first img {
+.project-child img {
   width: 100%;
   display: block;
 }
 
-/* Hidden by default */
 .overlay {
   position: absolute;
   inset: 0;
@@ -224,13 +213,14 @@ nav a {
   align-items: center;
   justify-content: center;
   color: white;
-  font-size: 1.5rem;
+  font-size: 100%;
   opacity: 0;
   transition: opacity 0.3s ease;
+  text-align: center;
 }
 
-.du-an-first:hover .overlay,
-.du-an-first:hover .overlay-text {
+.project-child:hover .overlay,
+.project-child:hover .overlay-text {
   opacity: 1;
 }
 
@@ -260,4 +250,32 @@ nav a {
 #footer i {
   color: #199cdb;
   font-size: 30px;
+}
+
+.credit {
+  text-align: center;
+  margin-top: 10px 10px 0;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+@media only screen and (max-width: 992px) {
+  .certi img {
+    display: none;
+  }
+  #about {
+    display: block;
+  }
+  #about-me,
+  #personal-info,
+  section > .container {
+    padding: 30px 20px;
+  }
+}
+
+@media (pointer: coarse) and (hover: none) {
+  .overlay,
+  .overlay-text {
+    opacity: 1;
+  }
 }
